@@ -1,0 +1,44 @@
+.account {
+  &_button {
+    margin: 1rem 0;
+    background: none;
+    border: 1px solid black;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    width: fit-content;
+    &:hover {
+      color: white;
+      background: grey;
+    }
+  }
+  &_form {
+    border: 1px solid black;
+    padding: 0.5rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+  &_input {
+    margin: 0.5rem 0;
+    height: 2rem;
+    font-size: 2rem;
+    &-pass-toggle {
+      &.activeToggle {
+        background-color: darkgreen;
+        color: white;
+      }
+    }
+    &-submit {
+      width: fit-content;
+      background: none;
+      border: 1px solid black;
+    }
+    &-fail {
+      color: red;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
