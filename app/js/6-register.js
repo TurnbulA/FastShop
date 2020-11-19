@@ -9,6 +9,7 @@ function register() {
 
   const name = document.createElement("input");
   name.classList.add("account_input", "account_input-name");
+  name.setAttribute("required", true);
   name.placeholder = "User Name";
 
   const passFail = document.createElement("div");
@@ -34,9 +35,9 @@ function register() {
   move.classList.add("account_button", "account_input-move-on");
 
   formBody.appendChild(name);
-  formBody.appendChild(passFail);
   formBody.appendChild(pass1);
   formBody.appendChild(pass2);
+  formBody.appendChild(passFail);
   formBody.appendChild(showPass);
   formBody.appendChild(move);
   checkRegButtons();
@@ -49,18 +50,23 @@ function checkRegButtons() {
     showPassToggle(passToggle);
   });
   reg.addEventListener("click", () => {
+    const name = document.querySelector(".account_input-name");
     const pass = document.querySelector(".account_input-pass");
     const passCheck = document.querySelector(".account_input-pass-conf");
+    const passFail = document.querySelector(".account_input-fail");
+
     if (pass.value === "") {
-      const failText = document.querySelector(".account_input-fail");
-      failText.innerHTML = "Enter A Password";
-      failText.classList.add("active");
+      passFail.innerHTML = "Enter A Password";
+      passFail.classList.add("active");
     } else {
-      if (pass.innerHTML === passCheck.innerHTML) {
+      if (pass.value === passCheck.value) {
+        passFail.innerHTML = "";
+        passFail.classList.remove("active");
+        nextSection(name.value, pass.value);
       } else {
+        passFail.innerHTML = "Passwords entered do not match";
+        passFail.classList.add("active");
       }
     }
-
-    // saveDetails();
   });
 }
