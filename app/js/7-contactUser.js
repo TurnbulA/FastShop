@@ -20,6 +20,10 @@ function nextSection(userName, passWord) {
   phone.placeholder = "Phone Number";
   phone.type = "number";
 
+  const company = document.createElement("input");
+  company.classList.add("account_input", "account_input-company");
+  company.placeholder = "Company";
+
   const submit = document.createElement("button");
   submit.innerHTML = "Submit";
   submit.classList.add("account_button", "account_input-submit");
@@ -28,6 +32,7 @@ function nextSection(userName, passWord) {
   form.appendChild(lastName);
   form.appendChild(email);
   form.appendChild(phone);
+  form.appendChild(company);
   form.appendChild(submit);
   submitDetails(userName, passWord);
 }
