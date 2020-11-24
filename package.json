@@ -16,7 +16,7 @@
     "url": "https://github.com/TurnbulA/FastShop/issues"
   },
   "homepage": "https://github.com/TurnbulA/FastShop#readme",
-  "dependencies": {
+  "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-minify": "^3.1.0",
@@ -26,5 +26,9 @@
     "gulp-uglify-es": "^2.0.0",
     "gulp-watch": "^5.0.1",
     "readable-stream": "^3.6.0"
+  },
+  "dependencies": {
+    "file-sync": "^0.0.2",
+    "node": "^15.2.1"
   }
 }
