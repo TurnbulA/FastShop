@@ -4,7 +4,7 @@ function loadPage(page) {
   if (page === "Home") {
     renderHome(page);
   } else if (page === "Products") {
-    // renderProduct();
+    renderProduct();
   } else if (page === "Cart") {
     // renderCart();
   } else if (page === "Orders") {

@@ -1,0 +1,22 @@
+.product {
+  &_wrapper {
+    display: flex;
+    flex-flow: wrap;
+  }
+  &_item {
+    border: 0.5rem solid;
+    margin: 0.5rem 0.5rem;
+    width: 30rem;
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &:hover {
+      background-color: lightgray;
+    }
+  }
+  &_img {
+    width: 20rem;
+    margin: 0 auto;
+  }
+}
